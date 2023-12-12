@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+   <form action="#" th:action="@{/calculate}" method="post">
+    Enter Number 1: <input type="number" name="num1"><br>
+    Enter Number 2: <input type="number" name="num2"><br>
+    <button type="submit">Calculate</button>
+</form>
+
+    <p th:text="${result}" id="result"></p>
+<a th:href="@{'/download-excel?num1=' + ${num1} + '&num2=' + ${num2}}" target="_blank">Download Excel</a>
+
+</body>
+</html>
